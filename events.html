@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل فعاليات المدينة - الفعاليات</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <!-- Google Fonts - Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./assets/img/logos/logo.png" alt="شعار دليل فعاليات المدينة" height="40">
+                    دليل فعاليات المدينة
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="events.html">الفعاليات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">عن الدليل</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">اتصل بنا</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h1 class="text-center mb-4">الفعاليات القادمة</h1>
+        
+        <!-- Search and Filter Section -->
+        <section class="filters mb-5">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="ابحث عن فعالية..." id="searchInput">
+                        <button class="btn btn-primary" type="button" id="searchButton">بحث</button>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <select class="form-select" id="categoryFilter">
+                        <option value="all">جميع التصنيفات</option>
+                        <option value="culture">ثقافة</option>
+                        <option value="sports">رياضة</option>
+                        <option value="music">موسيقى</option>
+                        <option value="arts">فنون</option>
+                        <option value="education">تعليم</option>
+                        <option value="entertainment">ترفيه</option>
+                        <option value="kids">أطفال</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="date" class="form-control" id="dateFilter">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <select class="form-select" id="locationFilter">
+                        <option value="all">جميع المواقع</option>
+                        <option value="downtown">وسط المدينة</option>
+                        <option value="conference-center">مركز المؤتمرات</option>
+                        <option value="theater">المسرح الوطني</option>
+                        <option value="exhibition-hall">صالة المعارض</option>
+                        <option value="stadium">الملعب الأولمبي</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+                <button class="btn btn-outline-primary filter-btn active" data-filter="all">الكل</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="culture">ثقافة</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="sports">رياضة</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="music">موسيقى</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="arts">فنون</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="education">تعليم</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="entertainment">ترفيه</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="kids">أطفال</button>
+            </div>
+        </section>
+
+        <!-- Events Grid -->
+        <section class="events-grid">
+            <div class="row" id="eventsContainer">
+                <!-- Event 1 -->
+                <div class="col-md-6 col-lg-4 mb-4 event-card" data-category="music" data-date="2023-11-22" data-location="theater">
+                    <div class="card h-100">
+                        <img src="./assets/img/events/event6.jpg" class="card-img-top" alt="أمسية موسيقية">
+                        <div class="card-body">
+                            <h5 class="card-title">أمسية موسيقية</h5>
+                            <p class="card-text">أمسية موسيقية مع فرقة محلية مشهورة تعزف مقطوعات من التراث والعصرية.</p>
+                            <span class="badge bg-success">موسيقى</span>
+                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> 22 نوفمبر 2023</small></p>
+                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> المسرح الوطني</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="col-md-6 col-lg-4 mb-4 event-card" data-category="education" data-date="2023-11-18" data-location="conference-center">
+                    <div class="card h-100">
+                        <img src="./assets/img/events/event4.jpg" class="card-img-top" alt="ندوة التكنولوجيا">
+                        <div class="card-body">
+                            <h5 class="card-title">ندوة التكنولوجيا والابتكار</h5>
+                            <p class="card-text">ندوة تناقش أحدث التطورات التكنولوجية وآفاق الابتكار في المنطقة.</p>
+                            <span class="badge bg-info">تعليم</span>
+                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> 18 نوفمبر 2023</small></p>
+                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> مركز المؤتمرات</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="col-md-6 col-lg-4 mb-4 event-card" data-category="arts" data-date="2023-11-20" data-location="exhibition-hall">
+                    <div class="card h-100">
+                        <img src="./assets/img/events/event5.jpg" class="card-img-top" alt="معرض الفنون">
+                        <div class="card-body">
+                            <h5 class="card-title">معرض الفنون التشكيلية</h5>
+                            <p class="card-text">معرض يضم أعمالًا فنية متميزة لفنانين محليين ودوليين.</p>
+                            <span class="badge bg-danger">فنون</span>
+                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> 20-25 نوفمبر 2023</small></p>
+                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> صالة الفنون</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 4 -->
+                <div class="col-md-6 col-lg-4 mb-4 event-card" data-category="sports" data-date="2023-11-25" data-location="stadium">
+                    <div class="card h-100">
+                        <img src="./assets/img/events/event3.jpg" class="card-img-top" alt="ماراثون المدينة">
+                        <div class="card-body">
+                            <h5 class="card-title">ماراثون المدينة الخيري</h5>
+                            <p class="card-text">ماراثون سنوي لمسافة 10 كم لدعم قضايا التعليم المحلية.</p>
+                            <span class="badge bg-secondary">رياضة</span>
+                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> 25 نوفمبر 2023</small></p>
+                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> الملعب الأولمبي</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 5 -->
+                <div class="col-md-6 col-lg-4 mb-4 event-card" data-category="culture" data-date="2023-11-15" data-location="downtown">
+                    <div class="card h-100">
+                        <img src="./assets/img/events/event1.jpg" class="card-img-top" alt="مهرجان الموسيقى">
+                        <div class="card-body">
+                            <h5 class="card-title">مهرجان الموسيقى السنوي</h5>
+                            <p class="card-text">مهرجان موسيقي يقدم عروضًا لفنانين محليين وعالميين على مدار أسبوع.</p>
+                            <span class="badge bg-primary">ثقافة</span>
+                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> 15-20 نوفمبر 2023</small></p>
+                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> ساحة المدينة</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 6 -->
+                <div class="col-md-6 col-lg-4 mb-4 event-card" data-category="kids" data-date="2023-11-26" data-location="conference-center">
+                    <div class="card h-100">
+                        <img src="./assets/img/events/event7.jpg" class="card-img-top" alt="ورشة عمل للأطفال">
+                        <div class="card-body">
+                            <h5 class="card-title">ورشة عمل إبداعية للأطفال</h5>
+                            <p class="card-text">ورشة تفاعلية لتنمية الإبداع والمواهب الفنية لدى الأطفال من 6-12 سنة.</p>
+                            <span class="badge bg-dark">أطفال</span>
+                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> 26 نوفمبر 2023</small></p>
+                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> مركز المؤتمرات</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">السابق</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">التالي</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>دليل فعاليات المدينة</h5>
+                    <p>منصة شاملة للتعرف على جميع الفعاليات والأنشطة في مدينتنا.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">الرئيسية</a></li>
+                        <li><a href="events.html" class="text-white">الفعاليات</a></li>
+                        <li><a href="about.html" class="text-white">عن الدليل</a></li>
+                        <li><a href="contact.html" class="text-white">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>تابعنا على</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2">فيسبوك</a>
+                        <a href="#" class="text-white me-2">تويتر</a>
+                        <a href="#" class="text-white">إنستغرام</a>
+                    </div>
+                    <p class="mt-3">البريد الإلكتروني: info@cityevents.com</p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
