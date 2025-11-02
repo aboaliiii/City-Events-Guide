@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دليل فعاليات المدينة - الفعاليات</title>
+    <title data-ar="دليل فعاليات المدينة - الفعاليات" data-en="City Events Guide - Events">دليل فعاليات المدينة - الفعاليات</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="./assets/css/style.css" rel="stylesheet">
     <!-- Google Fonts - Cairo -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -18,7 +20,7 @@
             <div class="container">
                 <a class="navbar-brand" href="index.html">
                     <img src="./assets/img/logos/logo.png" alt="شعار دليل فعاليات المدينة" height="40">
-                    دليل فعاليات المدينة
+                    <span data-ar="دليل فعاليات المدينة" data-en="City Events Guide">دليل فعاليات المدينة</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -26,16 +28,25 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">الرئيسية</a>
+                            <a class="nav-link" href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="events.html">الفعاليات</a>
+                            <a class="nav-link active" href="events.html" data-ar="الفعاليات" data-en="Events">الفعاليات</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">عن الدليل</a>
+                            <a class="nav-link" href="about.html" data-ar="عن الدليل" data-en="About">عن الدليل</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">اتصل بنا</a>
+                            <a class="nav-link" href="contact.html" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- زر تبديل اللغة -->
+                            <div class="language-switcher ms-3">
+                                <button class="btn btn-outline-light btn-sm" id="languageToggle">
+                                    <i class="bi bi-translate"></i>
+                                    <span data-ar="English" data-en="العربية">English</span>
+                                </button>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -45,27 +56,27 @@
 
     <!-- Main Content -->
     <main class="container my-5">
-        <h1 class="text-center mb-4">الفعاليات القادمة</h1>
+        <h1 class="text-center mb-4" data-ar="الفعاليات القادمة" data-en="Upcoming Events">الفعاليات القادمة</h1>
         
         <!-- Search and Filter Section -->
         <section class="filters mb-5">
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="ابحث عن فعالية..." id="searchInput">
-                        <button class="btn btn-primary" type="button" id="searchButton">بحث</button>
+                        <input type="text" class="form-control" placeholder="ابحث عن فعالية..." id="searchInput" data-ar-placeholder="ابحث عن فعالية..." data-en-placeholder="Search for an event...">
+                        <button class="btn btn-primary" type="button" id="searchButton" data-ar="بحث" data-en="Search">بحث</button>
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <select class="form-select" id="categoryFilter">
-                        <option value="all">جميع التصنيفات</option>
-                        <option value="culture">ثقافة</option>
-                        <option value="sports">رياضة</option>
-                        <option value="music">موسيقى</option>
-                        <option value="arts">فنون</option>
-                        <option value="education">تعليم</option>
-                        <option value="entertainment">ترفيه</option>
-                        <option value="kids">أطفال</option>
+                        <option value="all" data-ar="جميع التصنيفات" data-en="All Categories">جميع التصنيفات</option>
+                        <option value="culture" data-ar="ثقافة" data-en="Culture">ثقافة</option>
+                        <option value="sports" data-ar="رياضة" data-en="Sports">رياضة</option>
+                        <option value="music" data-ar="موسيقى" data-en="Music">موسيقى</option>
+                        <option value="arts" data-ar="فنون" data-en="Arts">فنون</option>
+                        <option value="education" data-ar="تعليم" data-en="Education">تعليم</option>
+                        <option value="entertainment" data-ar="ترفيه" data-en="Entertainment">ترفيه</option>
+                        <option value="kids" data-ar="أطفال" data-en="Kids">أطفال</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -73,24 +84,24 @@
                 </div>
                 <div class="col-md-6 mb-3">
                     <select class="form-select" id="locationFilter">
-                        <option value="all">جميع المواقع</option>
-                        <option value="downtown">وسط المدينة</option>
-                        <option value="conference-center">مركز المؤتمرات</option>
-                        <option value="theater">المسرح الوطني</option>
-                        <option value="exhibition-hall">صالة المعارض</option>
-                        <option value="stadium">الملعب الأولمبي</option>
+                        <option value="all" data-ar="جميع المواقع" data-en="All Locations">جميع المواقع</option>
+                        <option value="downtown" data-ar="وسط المدينة" data-en="Downtown">وسط المدينة</option>
+                        <option value="conference-center" data-ar="مركز المؤتمرات" data-en="Conference Center">مركز المؤتمرات</option>
+                        <option value="theater" data-ar="المسرح الوطني" data-en="National Theater">المسرح الوطني</option>
+                        <option value="exhibition-hall" data-ar="صالة المعارض" data-en="Exhibition Hall">صالة المعارض</option>
+                        <option value="stadium" data-ar="الملعب الأولمبي" data-en="Olympic Stadium">الملعب الأولمبي</option>
                     </select>
                 </div>
             </div>
             <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
-                <button class="btn btn-outline-primary filter-btn active" data-filter="all">الكل</button>
-                <button class="btn btn-outline-primary filter-btn" data-filter="culture">ثقافة</button>
-                <button class="btn btn-outline-primary filter-btn" data-filter="sports">رياضة</button>
-                <button class="btn btn-outline-primary filter-btn" data-filter="music">موسيقى</button>
-                <button class="btn btn-outline-primary filter-btn" data-filter="arts">فنون</button>
-                <button class="btn btn-outline-primary filter-btn" data-filter="education">تعليم</button>
-                <button class="btn btn-outline-primary filter-btn" data-filter="entertainment">ترفيه</button>
-                <button class="btn btn-outline-primary filter-btn" data-filter="kids">أطفال</button>
+                <button class="btn btn-outline-primary filter-btn active" data-filter="all" data-ar="الكل" data-en="All">الكل</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="culture" data-ar="ثقافة" data-en="Culture">ثقافة</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="sports" data-ar="رياضة" data-en="Sports">رياضة</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="music" data-ar="موسيقى" data-en="Music">موسيقى</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="arts" data-ar="فنون" data-en="Arts">فنون</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="education" data-ar="تعليم" data-en="Education">تعليم</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="entertainment" data-ar="ترفيه" data-en="Entertainment">ترفيه</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="kids" data-ar="أطفال" data-en="Kids">أطفال</button>
             </div>
         </section>
 
@@ -102,14 +113,14 @@
                     <div class="card h-100">
                         <img src="./assets/img/events/event6.jpg" class="card-img-top" alt="أمسية موسيقية">
                         <div class="card-body">
-                            <h5 class="card-title">أمسية موسيقية</h5>
-                            <p class="card-text">أمسية موسيقية مع فرقة محلية مشهورة تعزف مقطوعات من التراث والعصرية.</p>
-                            <span class="badge bg-success">موسيقى</span>
-                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> 22 نوفمبر 2023</small></p>
-                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> المسرح الوطني</small></p>
+                            <h5 class="card-title" data-ar="أمسية موسيقية" data-en="Musical Evening">أمسية موسيقية</h5>
+                            <p class="card-text" data-ar="أمسية موسيقية مع فرقة محلية مشهورة تعزف مقطوعات من التراث والعصرية." data-en="A musical evening with a famous local band playing heritage and contemporary pieces.">أمسية موسيقية مع فرقة محلية مشهورة تعزف مقطوعات من التراث والعصرية.</p>
+                            <span class="badge bg-success" data-ar="موسيقى" data-en="Music">موسيقى</span>
+                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> <span data-ar="22 نوفمبر 2023" data-en="November 22, 2023">22 نوفمبر 2023</span></small></p>
+                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> <span data-ar="المسرح الوطني" data-en="National Theater">المسرح الوطني</span></small></p>
                         </div>
                         <div class="card-footer">
-                            <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                            <a href="event.html" class="btn btn-primary" data-ar="التفاصيل" data-en="Details">التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -119,14 +130,14 @@
                     <div class="card h-100">
                         <img src="./assets/img/events/event4.jpg" class="card-img-top" alt="ندوة التكنولوجيا">
                         <div class="card-body">
-                            <h5 class="card-title">ندوة التكنولوجيا والابتكار</h5>
-                            <p class="card-text">ندوة تناقش أحدث التطورات التكنولوجية وآفاق الابتكار في المنطقة.</p>
-                            <span class="badge bg-info">تعليم</span>
-                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> 18 نوفمبر 2023</small></p>
-                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> مركز المؤتمرات</small></p>
+                            <h5 class="card-title" data-ar="ندوة التكنولوجيا والابتكار" data-en="Technology & Innovation Seminar">ندوة التكنولوجيا والابتكار</h5>
+                            <p class="card-text" data-ar="ندوة تناقش أحدث التطورات التكنولوجية وآفاق الابتكار في المنطقة." data-en="A seminar discussing the latest technological developments and innovation prospects in the region.">ندوة تناقش أحدث التطورات التكنولوجية وآفاق الابتكار في المنطقة.</p>
+                            <span class="badge bg-info" data-ar="تعليم" data-en="Education">تعليم</span>
+                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> <span data-ar="18 نوفمبر 2023" data-en="November 18, 2023">18 نوفمبر 2023</span></small></p>
+                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> <span data-ar="مركز المؤتمرات" data-en="Conference Center">مركز المؤتمرات</span></small></p>
                         </div>
                         <div class="card-footer">
-                            <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                            <a href="event.html" class="btn btn-primary" data-ar="التفاصيل" data-en="Details">التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -136,14 +147,14 @@
                     <div class="card h-100">
                         <img src="./assets/img/events/event5.jpg" class="card-img-top" alt="معرض الفنون">
                         <div class="card-body">
-                            <h5 class="card-title">معرض الفنون التشكيلية</h5>
-                            <p class="card-text">معرض يضم أعمالًا فنية متميزة لفنانين محليين ودوليين.</p>
-                            <span class="badge bg-danger">فنون</span>
-                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> 20-25 نوفمبر 2023</small></p>
-                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> صالة الفنون</small></p>
+                            <h5 class="card-title" data-ar="معرض الفنون التشكيلية" data-en="Fine Arts Exhibition">معرض الفنون التشكيلية</h5>
+                            <p class="card-text" data-ar="معرض يضم أعمالًا فنية متميزة لفنانين محليين ودوليين." data-en="An exhibition featuring outstanding artworks by local and international artists.">معرض يضم أعمالًا فنية متميزة لفنانين محليين ودوليين.</p>
+                            <span class="badge bg-danger" data-ar="فنون" data-en="Arts">فنون</span>
+                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> <span data-ar="20-25 نوفمبر 2023" data-en="November 20-25, 2023">20-25 نوفمبر 2023</span></small></p>
+                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> <span data-ar="صالة الفنون" data-en="Art Gallery">صالة الفنون</span></small></p>
                         </div>
                         <div class="card-footer">
-                            <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                            <a href="event.html" class="btn btn-primary" data-ar="التفاصيل" data-en="Details">التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -153,14 +164,14 @@
                     <div class="card h-100">
                         <img src="./assets/img/events/event3.jpg" class="card-img-top" alt="ماراثون المدينة">
                         <div class="card-body">
-                            <h5 class="card-title">ماراثون المدينة الخيري</h5>
-                            <p class="card-text">ماراثون سنوي لمسافة 10 كم لدعم قضايا التعليم المحلية.</p>
-                            <span class="badge bg-secondary">رياضة</span>
-                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> 25 نوفمبر 2023</small></p>
-                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> الملعب الأولمبي</small></p>
+                            <h5 class="card-title" data-ar="ماراثون المدينة الخيري" data-en="City Charity Marathon">ماراثون المدينة الخيري</h5>
+                            <p class="card-text" data-ar="ماراثون سنوي لمسافة 10 كم لدعم قضايا التعليم المحلية." data-en="Annual 10km marathon to support local education causes.">ماراثون سنوي لمسافة 10 كم لدعم قضايا التعليم المحلية.</p>
+                            <span class="badge bg-secondary" data-ar="رياضة" data-en="Sports">رياضة</span>
+                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> <span data-ar="25 نوفمبر 2023" data-en="November 25, 2023">25 نوفمبر 2023</span></small></p>
+                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> <span data-ar="الملعب الأولمبي" data-en="Olympic Stadium">الملعب الأولمبي</span></small></p>
                         </div>
                         <div class="card-footer">
-                            <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                            <a href="event.html" class="btn btn-primary" data-ar="التفاصيل" data-en="Details">التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -170,14 +181,14 @@
                     <div class="card h-100">
                         <img src="./assets/img/events/event1.jpg" class="card-img-top" alt="مهرجان الموسيقى">
                         <div class="card-body">
-                            <h5 class="card-title">مهرجان الموسيقى السنوي</h5>
-                            <p class="card-text">مهرجان موسيقي يقدم عروضًا لفنانين محليين وعالميين على مدار أسبوع.</p>
-                            <span class="badge bg-primary">ثقافة</span>
-                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> 15-20 نوفمبر 2023</small></p>
-                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> ساحة المدينة</small></p>
+                            <h5 class="card-title" data-ar="مهرجان الموسيقى السنوي" data-en="Annual Music Festival">مهرجان الموسيقى السنوي</h5>
+                            <p class="card-text" data-ar="مهرجان موسيقي يقدم عروضًا لفنانين محليين وعالميين على مدار أسبوع." data-en="A music festival featuring performances by local and international artists throughout the week.">مهرجان موسيقي يقدم عروضًا لفنانين محليين وعالميين على مدار أسبوع.</p>
+                            <span class="badge bg-primary" data-ar="ثقافة" data-en="Culture">ثقافة</span>
+                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> <span data-ar="15-20 نوفمبر 2023" data-en="November 15-20, 2023">15-20 نوفمبر 2023</span></small></p>
+                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> <span data-ar="ساحة المدينة" data-en="City Square">ساحة المدينة</span></small></p>
                         </div>
                         <div class="card-footer">
-                            <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                            <a href="event.html" class="btn btn-primary" data-ar="التفاصيل" data-en="Details">التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -187,14 +198,14 @@
                     <div class="card h-100">
                         <img src="./assets/img/events/event7.jpg" class="card-img-top" alt="ورشة عمل للأطفال">
                         <div class="card-body">
-                            <h5 class="card-title">ورشة عمل إبداعية للأطفال</h5>
-                            <p class="card-text">ورشة تفاعلية لتنمية الإبداع والمواهب الفنية لدى الأطفال من 6-12 سنة.</p>
-                            <span class="badge bg-dark">أطفال</span>
-                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> 26 نوفمبر 2023</small></p>
-                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> مركز المؤتمرات</small></p>
+                            <h5 class="card-title" data-ar="ورشة عمل إبداعية للأطفال" data-en="Creative Workshop for Kids">ورشة عمل إبداعية للأطفال</h5>
+                            <p class="card-text" data-ar="ورشة تفاعلية لتنمية الإبداع والمواهب الفنية لدى الأطفال من 6-12 سنة." data-en="Interactive workshop to develop creativity and artistic talents for children aged 6-12.">ورشة تفاعلية لتنمية الإبداع والمواهب الفنية لدى الأطفال من 6-12 سنة.</p>
+                            <span class="badge bg-dark" data-ar="أطفال" data-en="Kids">أطفال</span>
+                            <p class="mt-2"><small><i class="bi bi-calendar-event"></i> <span data-ar="26 نوفمبر 2023" data-en="November 26, 2023">26 نوفمبر 2023</span></small></p>
+                            <p class="mb-1"><small><i class="bi bi-geo-alt"></i> <span data-ar="مركز المؤتمرات" data-en="Conference Center">مركز المؤتمرات</span></small></p>
                         </div>
                         <div class="card-footer">
-                            <a href="event.html" class="btn btn-primary">التفاصيل</a>
+                            <a href="event.html" class="btn btn-primary" data-ar="التفاصيل" data-en="Details">التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -204,13 +215,13 @@
             <nav aria-label="Page navigation">
                 <ul class="pagination justify-content-center">
                     <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">السابق</a>
+                        <a class="page-link" href="#" tabindex="-1" data-ar="السابق" data-en="Previous">السابق</a>
                     </li>
                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" href="#">2</a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                     <li class="page-item">
-                        <a class="page-link" href="#">التالي</a>
+                        <a class="page-link" href="#" data-ar="التالي" data-en="Next">التالي</a>
                     </li>
                 </ul>
             </nav>
@@ -222,31 +233,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5>دليل فعاليات المدينة</h5>
-                    <p>منصة شاملة للتعرف على جميع الفعاليات والأنشطة في مدينتنا.</p>
+                    <h5 data-ar="دليل فعاليات المدينة" data-en="City Events Guide">دليل فعاليات المدينة</h5>
+                    <p data-ar="منصة شاملة للتعرف على جميع الفعاليات والأنشطة في مدينتنا." data-en="A comprehensive platform to discover all events and activities in our city.">منصة شاملة للتعرف على جميع الفعاليات والأنشطة في مدينتنا.</p>
                 </div>
                 <div class="col-md-4">
-                    <h5>روابط سريعة</h5>
+                    <h5 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white">الرئيسية</a></li>
-                        <li><a href="events.html" class="text-white">الفعاليات</a></li>
-                        <li><a href="about.html" class="text-white">عن الدليل</a></li>
-                        <li><a href="contact.html" class="text-white">اتصل بنا</a></li>
+                        <li><a href="index.html" class="text-white" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                        <li><a href="events.html" class="text-white" data-ar="الفعاليات" data-en="Events">الفعاليات</a></li>
+                        <li><a href="about.html" class="text-white" data-ar="عن الدليل" data-en="About">عن الدليل</a></li>
+                        <li><a href="contact.html" class="text-white" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5>تابعنا على</h5>
+                    <h5 data-ar="تابعنا على" data-en="Follow Us">تابعنا على</h5>
                     <div class="social-links">
-                        <a href="#" class="text-white me-2">فيسبوك</a>
-                        <a href="#" class="text-white me-2">تويتر</a>
-                        <a href="#" class="text-white">إنستغرام</a>
+                        <a href="#" class="text-white me-2" data-ar="فيسبوك" data-en="Facebook">فيسبوك</a>
+                        <a href="#" class="text-white me-2" data-ar="تويتر" data-en="Twitter">تويتر</a>
+                        <a href="#" class="text-white" data-ar="إنستغرام" data-en="Instagram">إنستغرام</a>
                     </div>
                     <p class="mt-3">البريد الإلكتروني: info@cityevents.com</p>
                 </div>
             </div>
             <hr>
             <div class="text-center">
-                <p>&copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
+                <p data-ar="&copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة." data-en="&copy; 2025 City Events Guide. All rights reserved.">&copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
@@ -256,5 +267,126 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="./assets/js/main.js"></script>
+    
+    <!-- JavaScript لتبديل اللغة -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageToggle = document.getElementById('languageToggle');
+            const html = document.documentElement;
+            
+            // تحميل اللغة المحفوظة أو استخدام العربية كافتراضي
+            let currentLang = localStorage.getItem('preferredLanguage') || 'ar';
+            
+            // تطبيق اللغة عند التحميل
+            applyLanguage(currentLang);
+            
+            // تبديل اللغة عند النقر على الزر
+            languageToggle.addEventListener('click', function() {
+                currentLang = currentLang === 'ar' ? 'en' : 'ar';
+                applyLanguage(currentLang);
+                localStorage.setItem('preferredLanguage', currentLang);
+            });
+            
+            function applyLanguage(lang) {
+                // تحديث سمة اللغة واتجاه النص
+                html.setAttribute('lang', lang);
+                html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+                
+                // تحديث جميع النصوص
+                document.querySelectorAll('[data-ar], [data-en]').forEach(element => {
+                    if (lang === 'ar') {
+                        element.textContent = element.getAttribute('data-ar');
+                    } else {
+                        element.textContent = element.getAttribute('data-en');
+                    }
+                });
+                
+                // تحديث placeholder للنص
+                document.querySelectorAll('[data-ar-placeholder], [data-en-placeholder]').forEach(element => {
+                    if (lang === 'ar') {
+                        element.placeholder = element.getAttribute('data-ar-placeholder');
+                    } else {
+                        element.placeholder = element.getAttribute('data-en-placeholder');
+                    }
+                });
+                
+                // تحديث نص زر تبديل اللغة
+                const toggleText = languageToggle.querySelector('span');
+                toggleText.textContent = lang === 'ar' ? 'English' : 'العربية';
+                
+                // إضافة/إزالة class للجسم لتطبيق أنماط CSS المختلفة
+                document.body.classList.toggle('english-layout', lang === 'en');
+                document.body.classList.toggle('arabic-layout', lang === 'ar');
+                
+                // تحديث خيارات ال select
+                updateSelectOptions(lang);
+            }
+            
+            function updateSelectOptions(lang) {
+                const selects = document.querySelectorAll('select');
+                selects.forEach(select => {
+                    const options = select.querySelectorAll('option');
+                    options.forEach(option => {
+                        if (option.hasAttribute('data-ar') && option.hasAttribute('data-en')) {
+                            if (lang === 'ar') {
+                                option.textContent = option.getAttribute('data-ar');
+                            } else {
+                                option.textContent = option.getAttribute('data-en');
+                            }
+                        }
+                    });
+                });
+            }
+            
+            // فلترة الفعاليات
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const eventCards = document.querySelectorAll('.event-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // إزالة النشط من جميع الأزرار
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // إضافة النشط للزر المحدد
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    eventCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // البحث في الفعاليات
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+            
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase();
+                
+                eventCards.forEach(card => {
+                    const title = card.querySelector('.card-title').textContent.toLowerCase();
+                    const description = card.querySelector('.card-text').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+            
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
