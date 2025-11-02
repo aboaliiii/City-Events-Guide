@@ -486,4 +486,77 @@ body.dark-mode #darkModeToggleContainer .form-check-input:checked {
     margin-left: 0;
     margin-right: 0.5rem;
   }
+
+}
+/* تنسيقات زر تبديل اللغة */
+.language-switcher .btn {
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.language-switcher .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* تنسيقات للوضع الإنجليزي */
+body.english-layout {
+    direction: ltr;
+    text-align: left;
+}
+
+body.english-layout .navbar-nav {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+body.english-layout .carousel-control-prev {
+    left: 0;
+    right: auto;
+}
+
+body.english-layout .carousel-control-next {
+    right: 0;
+    left: auto;
+}
+
+body.english-layout .me-auto {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+/* تنسيقات للوضع العربي */
+body.arabic-layout {
+    direction: rtl;
+    text-align: right;
+}
+
+/* تأثيرات انتقال سلسة عند تغيير اللغة */
+[data-ar], [data-en] {
+    transition: all 0.3s ease;
+}
+
+/* تحسينات للشريط التنقل في الوضع الإنجليزي */
+body.english-layout .navbar-brand {
+    margin-right: 0;
+}
+
+body.english-layout .navbar-nav .nav-item {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+/* تحسينات للبطاقات في الوضع الإنجليزي */
+body.english-layout .card-text,
+body.english-layout .card-title {
+    text-align: left;
+}
+
+/* تحسينات للفوتر في الوضع الإنجليزي */
+body.english-layout footer .text-start {
+    text-align: left !important;
+}
+
+body.english-layout footer .text-end {
+    text-align: right !important;
 }
