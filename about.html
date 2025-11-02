@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دليل فعاليات المدينة - عن الدليل</title>
+    <title data-ar="دليل فعاليات المدينة - عن الدليل" data-en="City Events Guide - About">دليل فعاليات المدينة - عن الدليل</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="./assets/css/style.css" rel="stylesheet">
     <!-- Google Fonts - Cairo -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -18,7 +20,7 @@
             <div class="container">
                 <a class="navbar-brand" href="index.html">
                     <img src="./assets/img/logos/logo.png" alt="شعار دليل فعاليات المدينة" height="40">
-                    دليل فعاليات المدينة
+                    <span data-ar="دليل فعاليات المدينة" data-en="City Events Guide">دليل فعاليات المدينة</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -26,16 +28,25 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">الرئيسية</a>
+                            <a class="nav-link" href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="events.html">الفعاليات</a>
+                            <a class="nav-link" href="events.html" data-ar="الفعاليات" data-en="Events">الفعاليات</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="about.html">عن الدليل</a>
+                            <a class="nav-link active" href="about.html" data-ar="عن الدليل" data-en="About">عن الدليل</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">اتصل بنا</a>
+                            <a class="nav-link" href="contact.html" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- زر تبديل اللغة -->
+                            <div class="language-switcher ms-3">
+                                <button class="btn btn-outline-light btn-sm" id="languageToggle">
+                                    <i class="bi bi-translate"></i>
+                                    <span data-ar="English" data-en="العربية">English</span>
+                                </button>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -45,17 +56,17 @@
 
     <!-- Main Content -->
     <main class="container my-5">
-        <h1 class="text-center mb-5">عن دليل فعاليات المدينة</h1>
+        <h1 class="text-center mb-5" data-ar="عن دليل فعاليات المدينة" data-en="About City Events Guide">عن دليل فعاليات المدينة</h1>
         
         <!-- About Section -->
         <section class="about-content mb-5">
             <div class="row">
                 <div class="col-lg-6">
-                    <h2 class="mb-4">رسالتنا</h2>
-                    <p>دليل فعاليات المدينة هو منصة شاملة تهدف إلى جمع وتنظيم جميع الفعاليات والأنشطة الثقافية والترفيهية والتعليمية التي تقام في مدينتنا. نسعى إلى تسهيل وصول المجتمع إلى هذه الفعاليات وتعزيز المشاركة المجتمعية في الحياة الثقافية والاجتماعية.</p>
+                    <h2 class="mb-4" data-ar="رسالتنا" data-en="Our Mission">رسالتنا</h2>
+                    <p data-ar="دليل فعاليات المدينة هو منصة شاملة تهدف إلى جمع وتنظيم جميع الفعاليات والأنشطة الثقافية والترفيهية والتعليمية التي تقام في مدينتنا. نسعى إلى تسهيل وصول المجتمع إلى هذه الفعاليات وتعزيز المشاركة المجتمعية في الحياة الثقافية والاجتماعية." data-en="City Events Guide is a comprehensive platform that aims to collect and organize all cultural, entertainment, and educational events and activities held in our city. We strive to facilitate community access to these events and enhance community participation in cultural and social life.">دليل فعاليات المدينة هو منصة شاملة تهدف إلى جمع وتنظيم جميع الفعاليات والأنشطة الثقافية والترفيهية والتعليمية التي تقام في مدينتنا. نسعى إلى تسهيل وصول المجتمع إلى هذه الفعاليات وتعزيز المشاركة المجتمعية في الحياة الثقافية والاجتماعية.</p>
                     
-                    <h2 class="mb-4 mt-5">رؤيتنا</h2>
-                    <p>أن نكون المنصة الأولى والموثوقة للتعرف على الفعاليات في مدينتنا، وأن نساهم في بناء مجتمع نشط ثقافيًا واجتماعيًا من خلال تسهيل الوصول إلى الفعاليات المتنوعة التي تلبي اهتمامات جميع أفراد المجتمع.</p>
+                    <h2 class="mb-4 mt-5" data-ar="رؤيتنا" data-en="Our Vision">رؤيتنا</h2>
+                    <p data-ar="أن نكون المنصة الأولى والموثوقة للتعرف على الفعاليات في مدينتنا، وأن نساهم في بناء مجتمع نشط ثقافيًا واجتماعيًا من خلال تسهيل الوصول إلى الفعاليات المتنوعة التي تلبي اهتمامات جميع أفراد المجتمع." data-en="To be the first and trusted platform for discovering events in our city, and to contribute to building a culturally and socially active community by facilitating access to diverse events that meet the interests of all community members.">أن نكون المنصة الأولى والموثوقة للتعرف على الفعاليات في مدينتنا، وأن نساهم في بناء مجتمع نشط ثقافيًا واجتماعيًا من خلال تسهيل الوصول إلى الفعاليات المتنوعة التي تلبي اهتمامات جميع أفراد المجتمع.</p>
                 </div>
                 <div class="col-lg-6">
                     <img src="./assets/img/about.jpg" class="img-fluid rounded" alt="عن دليل فعاليات المدينة">
@@ -63,76 +74,57 @@
             </div>
         </section>
         
-        <!-- Partners Section -->
-        <section class="partners-section mb-5">
-            <h2 class="text-center mb-4">شركاؤنا</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-3 col-6 text-center mb-4">
-                    <h5 class="mt-3">بلدية المدينة</h5>
-                </div>
-                <div class="col-md-3 col-6 text-center mb-4">
-                    <h5 class="mt-3">جمعية الثقافة والفنون</h5>
-                </div>
-                <div class="col-md-3 col-6 text-center mb-4">
-                    <h5 class="mt-3">غرفة التجارة</h5>
-                </div>
-                <div class="col-md-3 col-6 text-center mb-4">
-                    <h5 class="mt-3">الجامعة المحلية</h5>
-                </div>
-            </div>
-        </section>
-        
         <!-- Policies Section -->
         <section class="policies-section">
-            <h2 class="text-center mb-4">سياسات تقديم الفعاليات</h2>
+            <h2 class="text-center mb-4" data-ar="سياسات تقديم الفعاليات" data-en="Event Submission Policies">سياسات تقديم الفعاليات</h2>
             <div class="accordion" id="policiesAccordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#policy1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#policy1" data-ar="معايير قبول الفعاليات" data-en="Event Acceptance Criteria">
                             معايير قبول الفعاليات
                         </button>
                     </h2>
                     <div id="policy1" class="accordion-collapse collapse show" data-bs-parent="#policiesAccordion">
                         <div class="accordion-body">
                             <ul>
-                                <li>يجب أن تكون الفعالية منظمة بشكل احترافي وذات قيمة للمجتمع</li>
-                                <li>يجب أن تكون الفعالية مناسبة لجميع الأعمار أو محددة لفئة عمرية معينة بشكل واضح</li>
-                                <li>يجب تقديم معلومات كاملة ودقيقة عن الفعالية</li>
-                                <li>يجب أن تكون الفعالية قانونية ولا تخالف الأنظمة والقيم المجتمعية</li>
+                                <li data-ar="يجب أن تكون الفعالية منظمة بشكل احترافي وذات قيمة للمجتمع" data-en="The event must be professionally organized and of value to the community">يجب أن تكون الفعالية منظمة بشكل احترافي وذات قيمة للمجتمع</li>
+                                <li data-ar="يجب أن تكون الفعالية مناسبة لجميع الأعمار أو محددة لفئة عمرية معينة بشكل واضح" data-en="The event must be suitable for all ages or clearly specified for a particular age group">يجب أن تكون الفعالية مناسبة لجميع الأعمار أو محددة لفئة عمرية معينة بشكل واضح</li>
+                                <li data-ar="يجب تقديم معلومات كاملة ودقيقة عن الفعالية" data-en="Complete and accurate information about the event must be provided">يجب تقديم معلومات كاملة ودقيقة عن الفعالية</li>
+                                <li data-ar="يجب أن تكون الفعالية قانونية ولا تخالف الأنظمة والقيم المجتمعية" data-en="The event must be legal and not violate regulations and community values">يجب أن تكون الفعالية قانونية ولا تخالف الأنظمة والقيم المجتمعية</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#policy2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#policy2" data-ar="إجراءات تقديم الفعالية" data-en="Event Submission Procedures">
                             إجراءات تقديم الفعالية
                         </button>
                     </h2>
                     <div id="policy2" class="accordion-collapse collapse" data-bs-parent="#policiesAccordion">
                         <div class="accordion-body">
                             <ol>
-                                <li>ملء نموذج تقديم الفعالية بشكل كامل</li>
-                                <li>تقديم صور ومواد promotional ذات جودة</li>
-                                <li>الالتزام بالمواعيد النهائية للتقديم (قبل 10 أيام على الأقل من تاريخ الفعالية)</li>
-                                <li>الرد على استفسارات فريق الدليل في غضون 48 ساعة</li>
+                                <li data-ar="ملء نموذج تقديم الفعالية بشكل كامل" data-en="Complete the event submission form in full">ملء نموذج تقديم الفعالية بشكل كامل</li>
+                                <li data-ar="تقديم صور ومواد promotional ذات جودة" data-en="Provide quality promotional images and materials">تقديم صور ومواد promotional ذات جودة</li>
+                                <li data-ar="الالتزام بالمواعيد النهائية للتقديم (قبل 10 أيام على الأقل من تاريخ الفعالية)" data-en="Adhere to submission deadlines (at least 10 days before the event date)">الالتزام بالمواعيد النهائية للتقديم (قبل 10 أيام على الأقل من تاريخ الفعالية)</li>
+                                <li data-ar="الرد على استفسارات فريق الدليل في غضون 48 ساعة" data-en="Respond to the guide team's inquiries within 48 hours">الرد على استفسارات فريق الدليل في غضون 48 ساعة</li>
                             </ol>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#policy3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#policy3" data-ar="سياسة الإلغاء والتعديل" data-en="Cancellation and Modification Policy">
                             سياسة الإلغاء والتعديل
                         </button>
                     </h2>
                     <div id="policy3" class="accordion-collapse collapse" data-bs-parent="#policiesAccordion">
                         <div class="accordion-body">
                             <ul>
-                                <li>يجب إخطار الدليل بأي تغييرات في موعد أو مكان الفعالية قبل 48 ساعة على الأقل</li>
-                                <li>في حال إلغاء الفعالية، يجب إخطار الدليل فورًا</li>
-                                <li>يحق للدليل إزالة أي فعالية لا تتوافق مع المعايير بعد نشرها</li>
-                                <li>التعديلات على معلومات الفعالية بعد النشر تخضع لمراجعة الفريق</li>
+                                <li data-ar="يجب إخطار الدليل بأي تغييرات في موعد أو مكان الفعالية قبل 48 ساعة على الأقل" data-en="The guide must be notified of any changes in event timing or location at least 48 hours in advance">يجب إخطار الدليل بأي تغييرات في موعد أو مكان الفعالية قبل 48 ساعة على الأقل</li>
+                                <li data-ar="في حال إلغاء الفعالية، يجب إخطار الدليل فورًا" data-en="In case of event cancellation, the guide must be notified immediately">في حال إلغاء الفعالية، يجب إخطار الدليل فورًا</li>
+                                <li data-ar="يحق للدليل إزالة أي فعالية لا تتوافق مع المعايير بعد نشرها" data-en="The guide has the right to remove any event that does not comply with standards after publication">يحق للدليل إزالة أي فعالية لا تتوافق مع المعايير بعد نشرها</li>
+                                <li data-ar="التعديلات على معلومات الفعالية بعد النشر تخضع لمراجعة الفريق" data-en="Modifications to event information after publication are subject to team review">التعديلات على معلومات الفعالية بعد النشر تخضع لمراجعة الفريق</li>
                             </ul>
                         </div>
                     </div>
@@ -140,7 +132,7 @@
             </div>
             
             <div class="text-center mt-4">
-                <a href="contact.html" class="btn btn-primary">تقديم فعالية</a>
+                <a href="contact.html" class="btn btn-primary" data-ar="تقديم فعالية" data-en="Submit an Event">تقديم فعالية</a>
             </div>
         </section>
     </main>
@@ -150,31 +142,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5>دليل فعاليات المدينة</h5>
-                    <p>منصة شاملة للتعرف على جميع الفعاليات والأنشطة في مدينتنا.</p>
+                    <h5 data-ar="دليل فعاليات المدينة" data-en="City Events Guide">دليل فعاليات المدينة</h5>
+                    <p data-ar="منصة شاملة للتعرف على جميع الفعاليات والأنشطة في مدينتنا." data-en="A comprehensive platform to discover all events and activities in our city.">منصة شاملة للتعرف على جميع الفعاليات والأنشطة في مدينتنا.</p>
                 </div>
                 <div class="col-md-4">
-                    <h5>روابط سريعة</h5>
+                    <h5 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white">الرئيسية</a></li>
-                        <li><a href="events.html" class="text-white">الفعاليات</a></li>
-                        <li><a href="about.html" class="text-white">عن الدليل</a></li>
-                        <li><a href="contact.html" class="text-white">اتصل بنا</a></li>
+                        <li><a href="index.html" class="text-white" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                        <li><a href="events.html" class="text-white" data-ar="الفعاليات" data-en="Events">الفعاليات</a></li>
+                        <li><a href="about.html" class="text-white" data-ar="عن الدليل" data-en="About">عن الدليل</a></li>
+                        <li><a href="contact.html" class="text-white" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5>تابعنا على</h5>
+                    <h5 data-ar="تابعنا على" data-en="Follow Us">تابعنا على</h5>
                     <div class="social-links">
-                        <a href="#" class="text-white me-2">فيسبوك</a>
-                        <a href="#" class="text-white me-2">تويتر</a>
-                        <a href="#" class="text-white">إنستغرام</a>
+                        <a href="#" class="text-white me-2" data-ar="فيسبوك" data-en="Facebook">فيسبوك</a>
+                        <a href="#" class="text-white me-2" data-ar="تويتر" data-en="Twitter">تويتر</a>
+                        <a href="#" class="text-white" data-ar="إنستغرام" data-en="Instagram">إنستغرام</a>
                     </div>
                     <p class="mt-3">البريد الإلكتروني: info@cityevents.com</p>
                 </div>
             </div>
             <hr>
             <div class="text-center">
-                <p>&copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
+                <p data-ar="&copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة." data-en="&copy; 2025 City Events Guide. All rights reserved.">&copy; 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
@@ -184,7 +176,59 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="./assets/js/main.js"></script>
+    
+    <!-- JavaScript لتبديل اللغة -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageToggle = document.getElementById('languageToggle');
+            const html = document.documentElement;
+            
+            // تحميل اللغة المحفوظة أو استخدام العربية كافتراضي
+            let currentLang = localStorage.getItem('preferredLanguage') || 'ar';
+            
+            // تطبيق اللغة عند التحميل
+            applyLanguage(currentLang);
+            
+            // تبديل اللغة عند النقر على الزر
+            languageToggle.addEventListener('click', function() {
+                currentLang = currentLang === 'ar' ? 'en' : 'ar';
+                applyLanguage(currentLang);
+                localStorage.setItem('preferredLanguage', currentLang);
+            });
+            
+            function applyLanguage(lang) {
+                // تحديث سمة اللغة واتجاه النص
+                html.setAttribute('lang', lang);
+                html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+                
+                // تحديث جميع النصوص
+                document.querySelectorAll('[data-ar], [data-en]').forEach(element => {
+                    if (lang === 'ar') {
+                        element.textContent = element.getAttribute('data-ar');
+                    } else {
+                        element.textContent = element.getAttribute('data-en');
+                    }
+                });
+                
+                // تحديث نص زر تبديل اللغة
+                const toggleText = languageToggle.querySelector('span');
+                toggleText.textContent = lang === 'ar' ? 'English' : 'العربية';
+                
+                // إضافة/إزالة class للجسم لتطبيق أنماط CSS المختلفة
+                document.body.classList.toggle('english-layout', lang === 'en');
+                document.body.classList.toggle('arabic-layout', lang === 'ar');
+                
+                // تحديث حالة الأكورديون النشط بناءً على اللغة
+                updateAccordionForLanguage(lang);
+            }
+            
+            function updateAccordionForLanguage(lang) {
+                // إذا كانت اللغة إنجليزية، تأكد من أن الأكورديون مفتوح بشكل صحيح
+                if (lang === 'en') {
+                    // يمكن إضافة أي منطق إضافي مطلوب للأكورديون هنا
+                }
+            }
+        });
+    </script>
 </body>
-
 </html>
-
